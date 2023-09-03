@@ -68,7 +68,7 @@ public class Command_saconfig extends FreedomCommand
 
                 if (!rank.isAtLeast(Rank.SUPER))
                 {
-                    msg("Rank must be Super or higher.", ChatColor.RED);
+                    msg("Rank must be Super Admin or higher.", ChatColor.RED);
                     return true;
                 }
 
@@ -164,7 +164,7 @@ public class Command_saconfig extends FreedomCommand
 
                 if (plugin.al.isAdmin(player))
                 {
-                    msg("That player is already an admin.");
+                    msg("That player is already supered.");
                     return true;
                 }
 
