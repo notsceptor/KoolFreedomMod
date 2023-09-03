@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="maven-antrun-" default="main">
+  <target name="main">
+    <propertyfile file="/Users/jjohnston/Desktop/TotalFreedomMod-1da87eeb3733fff63e27c149b00372284b2ceb13/src/main/resources/build.properties" comment="Build information. Edit this to your liking.">
+      <entry default="unknown" key="buildAuthor" />
+      <entry default="0" key="buildNumber" />
+      <entry value="Phoenix" key="buildCodeName" />
+      <entry value="CUSTOM-2023.09" key="buildVersion" />
+      <entry value="09/03/2023 16:48" key="buildDate" />
+      <entry value="${git.commit.id.abbrev}" key="buildHead" />
+    </propertyfile>
+  </target>
+</project>

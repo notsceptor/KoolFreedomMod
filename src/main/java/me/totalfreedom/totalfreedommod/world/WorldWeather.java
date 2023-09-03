@@ -1,0 +1,44 @@
+package me.totalfreedom.totalfreedommod.world;
+
+import org.apache.commons.lang.StringUtils;
+import org.bukkit.World;
+
+import java.util.Arrays;
+import java.util.List;
+
+public enum WorldWeather
+{
+
+    OFF("off"),
+    RAIN("rain"),
+    STORM("storm,thunderstorm");
+    //
+    private final List<String> aliases;
+
+    WorldWeather(String aliases)
+    {
+        this.aliases = Arrays.asList(StringUtils.split(aliases, ","));
+    }
+
+    public static WorldWeather getByAlias(String needle)
+    {
+        needle = needle.toLowerCase();
+        for (WorldWeather mode : values())
+        {
+            if (mode.aliases.contains(needle))
+            {
+                return mode;
+            }
+        }
+        return null;
+    }
+
+    public void setWorldToWeather(World world)
+    {
+        world.setStorm(this == RAIN || this == STORM);
+        world.setWeatherDuration(this == RAIN || this == STORM ? 20 * 60 * 5 : 0);
+
+        world.setThundering(this == STORM);
+        world.setThunderDuration(this == STORM ? 20 * 60 * 5 : 0);
+    }
+}

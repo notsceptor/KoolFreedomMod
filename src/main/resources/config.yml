@@ -1,0 +1,801 @@
+
+# Generic server information
+server:
+  # You should change this to your server's name
+  name: KoolFreedom
+
+  # The address your server is located at. Please do not include the port.
+  address: koolfreedom.eu.org
+
+  # Shown at the server list - Please note that support for %mcversion% has been withdrawn
+  motd: KoolFreedom &cFreeOP!\n&8&k1111111111111
+
+  # Every word in the MOTD will be a different color unless prefixed by a color code
+  colorful_motd: true
+
+  # MOTD Modification
+  motds:
+    ban: '&cYou are banned.'
+    adminmode: '&cServer is closed.'
+    lockdown: '&cServer is in lock-down.'
+    whitelist: '&cWhitelist enabled.'
+    full: '&cServer is full.'
+
+  # Shown on join as a title
+  login_title:
+    title: '&7Welcome to &6TotalFreedom&7!'
+    subtitle: '&eThe Original All-Op Server!'
+
+  # All players who show up as owner
+  owners:
+    - gamingto12
+  coowners:
+    - feminuker
+  developers:
+    - HowToFailBote
+    - Aquadraws
+  system_admins:
+    - JuliaDev
+  executives:
+    - svloogz
+    - Prolect
+    - Crimson_proto
+    - 0x7694C9
+  assistant_executives: [ ]
+  master_builder_management:
+    - gamingto12
+    - Crimson_proto
+    - feminuker
+
+  # URL players should appeal for bans at
+  ban_url: ''
+
+  # URL players should appeal for permanent bans at
+  indefban_url: ''
+
+  # What to display at the top of the tab list
+  tablist_header: ''
+
+  # What to display at the bottom of the tab list
+  tablist_footer: ''
+
+# Discord
+discord:
+  verification: false
+  # If you do not have a token, make a bot account and get one at https://discordapp.com/developers/applications/me
+  token: ''
+  # The prefix for the integrated bot commands
+  prefix: 'tf!'
+  # The official discord server's ID for this server
+  server_id: ''
+  # Channel to send /report messages to
+  report_channel_id: ''
+  # Channel to send archived reports to
+  report_archive_channel_id: ''
+  # Channel for Discord to Minecraft and vice-versa
+  chat_channel_id: ''
+  # Channel for Discord to AdminChat and vice-versa
+  adminchat_channel_id: ''
+  # Do you want roles to sync with the server?
+  role_sync: false
+  # Master Builder role ID
+  master_builder_role_id: ''
+  # Admin role ID
+  admin_role_id: ''
+  # Senior Admin role ID
+  senior_admin_role_id: ''
+  # Developer role ID
+  developer_role_id: ''
+  # SysAdmin role ID
+  sysadmin_role_id: ''
+  # Assistant Executive role ID
+  assistant_executive_role_id: ''
+  # Executive Admin role ID
+  executive_role_id: ''
+  # Co-Owner role ID
+  co_owner_role_id: ''
+  # Owner role ID
+  server_owner_role_id: ''
+  # Invite link for your Discord server
+  invite_link: 'https://discord.com/invite/PW4savJR9a'
+
+# Pterodactyl
+ptero:
+  # URL - do not leave a trailing forward slash
+  url: ''
+  # The default email domain used to set email addresses for new users - do not include the @
+  default_email_domain: 'example.com'
+  # Server UUID
+  server_uuid: ''
+  # Admin panel API key
+  admin_key: ''
+  # Server API key
+  server_key: ''
+
+# The shop
+shop:
+  # Enable the shop
+  enabled: true
+
+  # Shop title
+  title: '&e&lKoolFreedom Shop'
+
+  # Shop prefix
+  prefix: '&8[&eKool Shop&8]'
+
+  # How many coins to voters get per vote?
+  coins_per_vote: 20
+
+  # Chat reactions
+  reactions:
+
+    # Enable chat reactions?
+    enabled: true
+
+    # How much time (in seconds) before a new reaction prompt is made
+    interval: 300
+
+    # How much time do players have to react
+    time: 30.0
+
+    # How many coins do winners get?
+    coins_per_win: 5
+
+    # How long is the random string (in characters)?
+    string_length: 10
+
+  # Login messages. Use %name% for usernames, and %rank% for ranks/titles
+  login_messages:
+    - '%name% is a terrible %coloredrank%'
+    - 'that %name% dude is a shitty %coloredrank%'
+    - 'Hi, my name is %name% and I''m %art% %coloredrank%&b that wasted coins on this login message.'
+    - '&aDo not fear, %coloredrank% &b%name% &ais here!'
+    - '%name% is %art% %coloredrank%&b, say hi to them before they gets banned for doing something stupid'
+    - 'Oh. It''s &l%name%&r&b the %coloredrank%&b again. Great.'
+    - 'Make way for %name% the %coloredrank%&b!'
+    - 'It''s a bird! It''s a plane! No, it''s %art% %rank%! It''s %name%'
+    - '%rank% %name%'
+    - '%coloredrank%&b %name%'
+    - 'A wild %name%, %art% %coloredrank%&b, appeared!'
+    - 'All in all, the %rank% %name% is just another brick in the wall'
+    - '&a%name% &bis a a geeky &6%rank%'
+    - '%name% is the %rank% who just exists'
+    - '%name% based cringe poggers based based %rank%'
+    - '%name% thinks that &dWindows Server 2019 &bis the best server OS'
+    - '%name% is %art% %coloredrank% and a &4&lDark Side worshipper.'
+
+  # Item prices
+  prices:
+    grappling_hook: 100
+    lightning_rod: 1000
+    fire_ball: 500
+    rideable_pearl: 700
+    stacking_potato: 300
+    clown_fish: 1500
+    login_messages: 5000
+    rainbow_trail: 1500
+
+# Admin list
+adminlist:
+
+  # The amount of hours after which admins may be removed from the admin list
+  clean_threshold_hours: 167
+
+  # Give the default CONSOLE admin privileges.
+  # Handy in development environments.
+  console_is_admin: true
+
+# CoreProtect
+coreprotect:
+  enabled: false
+  host: 'localhost'
+  port: '3306'
+  username: ''
+  password: ''
+  database: 'coreprotect'
+
+# ForceIP configuration
+forceip:
+  enabled: false
+
+  # The port players should use to connect to your server; only applies to forceip
+  port: 25565
+
+  # The kick message sent to players when logging in with the wrong hostname
+  kickmsg: You have been kicked from the server - Please connect using %address%
+
+# TotalFreedom Social Media Links, casing will be preserved
+social_links:
+  Forum: 'https://forum.totalfreedom.me'
+  Website: 'https://totalfreedom.me'
+  Discord: 'https://discord.com/invite/PW4savJR9a'
+#  Reddit: 'https://reddit.com/r/TotalFreedom'
+  Twitter: 'https://twitter.com/TotalFreedomMC'
+  Facebook: 'https://facebook.com/TotalFreedomMC'
+#  Tumblr: 'https://totalfreedom.tumblr.com'
+#  Instagram: 'https://www.instagram.com/totalfreedommc/'
+
+# Blocking certain events
+allow:
+  fire_place: true
+  fire_spread: false
+  fluid_spread: false
+  lava_place: true
+  lava_damage: true
+  water_place: true
+  tnt_minecarts: false
+  explosions: false
+  redstone: true
+  fireworks: true
+  frostwalker: false
+  unsafe_enchantments: true
+  bells: true
+  armorstands: true
+  minecarts: true
+  clearonjoin: false
+  tpronjoin: false
+  structureblocks: false
+  jigsaws: false
+  grindstones: true
+  jukeboxes: true
+  spawners: false
+  beehives: false
+  respawnanchors: false
+  auto_tp: false
+  auto_clear: false
+  gravity: false
+
+blocked_commands:
+  #
+  # How globally blocked commands work:
+  # All sections described below are delimited by colon characters.
+  # Make sure that you block a command by its main command name, not an alias
+  # as all aliases are blocked by default. Commands are case-insensitive.
+  #
+  # * The first section is a letter which indicates which rank may use this command
+  #   Valid ranks:
+  #   n - Nobody (Completely disabled)
+  #   a - Admins (Console)
+  #   s - Senior Admins (Console)
+  #   o - Ops (Non-Ops won't be able to use it)
+  #
+  # * The second section is a letter which indicates what to do when a player executes that command.
+  #   Valid actions:
+  #   b - Block the command
+  #   a - Block the command and auto-eject that player (for ops and below)
+  #   u - Block the command and Return an "Unknown command" message (Used to hide commands)
+  #
+  # * The third section is the command to be blocked, prefixed with a slash
+  #
+  # * The fourth section is the message to send to the player when executing that command.
+  #   This should be omitted if unwanted. ChatColors are supported with the &-key. By default
+  #   the starting ChatColor is set to gray. You can use the default 'That command is blocked.' message
+  #   by using a single underscore.
+  #
+  # Examples:
+  #   - 'n:b:/mail sendall:&4You can't send mails to everyone!'
+  #   - 's:a:/stop'
+  #   - 'n:b:/ban:_'
+  #
+  global:
+    # CoreProtect Blocked and shows as an unknown command...
+    - 'a:u:/co:_'
+    - 'n:u:/co purge:_'
+    - 'a:u:/coreprotect:_'
+    - 'n:u:/coreprotect purge:_'
+    - 'a:u:/core:_'
+    - 'n:u:/core purge:_'
+
+    # Disabled commands
+    - 'n:b:/essentials:_'
+    - 'n:b:/time:Server-side time changing is disabled. Please use /ptime to set your own personal time.'
+    - 'n:b:/disguiseradius:_'
+    - 'n:b:/undisguiseradius:_'
+    - 'n:b:/debug:_'
+    - 'n:b:/pardon:_'
+    - 'n:b:/ban-ip:_'
+    - 'n:b:/pardon-ip:_'
+    - 'n:b:/toggledownfall:_'
+    - 'n:b:/spreadplayers:_'
+    - 'n:b:/blockdata:_'
+    - 'n:b:/clearhistory:_'
+    - 'n:b:/save-on:_'
+    - 'n:b:/save-off:_'
+    - 'n:b:/packet:_'
+    - 'n:b://eval:_'
+    - 'n:b:/testvote:_'
+    - 'n:b:/nvreload:_'
+    - 'n:b:/bungeeguard:_'
+    - 'n:b:/buycraft:_'
+    - 'n:b:/spigot reload:_'
+    - 'n:b:/mail sendall:Sending mail to all players is not allowed.'
+    - 'n:b:/entitydata:_'
+    - 'n:b:/skins:_'
+    - 'n:b:/advancement:_'
+    - 'n:b:/worldborder:The worldborder does not need to be changed. This command is disabled.'
+    - 'n:b:/defaultgamemode:The default gamemode should not be changed.'
+    - 'n:b:/thread:_'
+    - 'n:b:/stacktrace:_'
+    - 'n:b:/function:_'
+    - 'n:b:/forceload:_'
+    - 'n:b:/fill:_'
+    - 'n:b:/paper:_'
+    - 'n:b:/locate:_'
+    - 'n:b:/vvbukkit:_'
+    - 'n:b:/plot area c:_'
+    - 'n:b:/d minecart_command:_'
+    - 'n:b:/loot:_'
+    - 'n:b:/plan:_'
+    - 'n:b://material:_'
+    - 'n:b://mat:_'
+    - 'n:b:/mat:_'
+    - 'n:b:/vpnguard:_'
+    - 'n:b:/pcapi:_'
+    - 'n:b://distr:&cNope.'
+    - 'n:b:/data:_'
+    - 'n:b:/datapack:_'
+    - 'n:b://regen:_'
+    - 'n:b:/execute:_'
+    - 'n:b:/killall:_'
+    - 'n:b:/createdisguise:_'
+    - 'n:b:/attribute:_'
+
+    # Admin commands
+    - 'a:b:/vive:_'
+    - 'a:b:/vse:_'
+    - 'a:b:/lightning:_'
+    - 'a:b:/playsound:_'
+    - 'a:b:/locatebiome:_'
+    - 'a:b:/delchunks:_'
+    - 'a:b:/exploitfixer:_'
+    - 'a:b:/massivelag:_'
+    - 'a:b:/ml:_'
+    - 'a:b:/createkit:_'
+    - 'a:b:/delkit:_'
+    - 'a:b:/region:_'
+    - 'a:b:/clone:_'
+    - 'a:b:/cap:_'
+    - 'a:b:/gamemode:Use /gmc and /gms to set your gamemode.'
+    - 'a:b:/powernbt:_'
+    - 'a:b:/nbt.:_'
+    - 'a:b:/blockshub:_'
+    - 'a:b:/protocol:_'
+    - 'a:b:/libsdisguises reload:_'
+    - 'a:b://awe:_'
+    - 'a:b:/stopfire:_'
+    - 'a:b:/allowfire'
+    - 'a:b:/stoplag:_'
+    - 'a:b:/worldguard:_'
+    - 'a:b:/slay:_'
+    - 'a:b:/save-all:_'
+    - 'a:b:/libsdisguises:_'
+    - 'a:b:/particle:Due to security reasons, the use of /particle has been disabled.'
+    - 'a:b:/rainbowclear:_'
+    - 'a:b:/rainbowspeed:_'
+    - 'a:b:/kick:_'
+    - 'a:b:/difficulty:_'
+    - 'a:b:/captchafy:_'
+    - 'a:b:/socialspy:_'
+    - 'a:b:/sproxy:_'
+    - 'a:b:/replaceitem:_'
+    - 'a:b:/kill:_'
+    - 'a:b:/reaction:_'
+    - 'a:b:/setworldspawn:_'
+    - 'a:b:/scoreboard:_'
+    - 'a:b:/setspawn:_'
+    - 'a:b:/forestgen:_'
+    - 'a:b:/setidletimeout:_'
+    - 'a:b:/lrbuild:_'
+    - 'a:b:/size:_'
+    - 'a:b:/break:_'
+    - 'a:b:/disentity:_'
+    - 'a:b:/reload:_'
+    - 'a:b:/title:_'
+    - 'a:b:/weather:_'
+    - 'a:b:/tpall:_'
+    - 'a:b:/etpall:_'
+    - 'a:b:/setblock:_'
+    - 'a:b:/gamerule:_'
+    - 'a:b:/togglejail:_'
+    - 'a:b:/range:_'
+    - 'a:b:/stop:_'
+    - 'a:b:/restart:_'
+    - 'a:b:/sr:_'
+    - 'a:b:/tpo:_'
+    - 'a:b:/tpohere:_'
+    - 'a:b:/tphere:_'
+    - 'a:b:/rfchairs:_'
+    - 'a:b:/ppo:_'
+    - 'a:b:/vulnerabilitypatcher:_'
+    - 'a:b:/crackshot config:_'
+    - 'a:b:/marry reload:_'
+    - 'a:b:/bh:_'
+    - 'a:b:/tpaall:_'
+    - 'a:b:/paper heap:_'
+    - 'a:u:/burn:_'
+    - 'a:b:/summon:_'
+    - 'a:b:/discord:_'
+    - 'a:b:/bossbar:_'
+    - 'a:b:/team:_'
+    - 'a:b:/spawner:_'
+    - 's:b:/istack:_'
+    - 'a:b:/getloc:_'
+    - 'a:b:/holo:_'
+    - 'a:b:/hd:_'
+    - 'a:b:/hologram:_'
+    - 'a:b:/holograms:_'
+    - 's:b:/awe toggle:_'
+    - 's:b:/tellraw:_'
+    - 's:b://awe toggle:_'
+    - 'a:b:/openinv:_'
+    - 'a:b:/oi:_'
+    - 'a:b:/open:_'
+    - 'a:b:/openender:_'
+    - 'a:b:/oe:_'
+    - 'a:b:/searchinv:_'
+    - 'a:b:/si:_'
+    - 'a:b:/searchender:_'
+    - 'a:b:/se:_'
+    - 'a:b:/searchenchant:_'
+    - 'a:b:/searchenchants:_'
+    - 'a:b:/anycontainer:_'
+    - 'a:b:/anychest:_'
+    - 'a:b:/sc:_'
+    - 'a:b:/fawe:_'
+    - 'a:b:/wea:_'
+    - 'a:b:/protocolsupport:_'
+    - 'a:b:/ps:_'
+    - 'n:b:/wra:_'
+    - 's:b:/viaver:_'
+    - 's:b:/viaversion:_'
+    - 's:b:/spark:_'
+    - 's:b://g:_'
+
+  # Commands that cannot be used by muted players
+  muted:
+    - say
+    - me
+    - msg
+    - tell
+    - reply
+    - mail
+
+  # Commands that cannot be used with /wildcard
+  wildcard:
+    - wildcard
+    - gtfo
+    - doom
+    - slconfig
+    - smite
+
+# Words that cannot be used in tags
+forbidden_words:
+  - admin
+  - owner
+  - moderator
+  - developer
+  - console
+  - dev
+  - staff
+  - mod
+  - sra
+  - tca
+  - sta
+  - sa
+
+# Automatically wipe dropped objects
+auto_wipe: true
+
+# Nuking prevention
+nukemonitor:
+  enabled: true
+  count_break: 100
+  count_place: 40
+  range: 10.0
+
+freecam_trigger_count: 10
+explosive_radius: 4.0
+
+# Show all attempted commands in the log, will result in duplicate log messages
+preprocess_log: true
+
+# Disable certain events
+disable:
+  night: true
+  weather: true
+
+
+# Enable misc. features
+landmines_enabled: false
+mp44_enabled: false
+tossmob_enabled: false
+4chan_enabled: false
+
+# Moblimiter
+moblimiter:
+  enabled: true
+  max: 50
+  disable:
+    dragon: true
+    ghast: true
+    slime: true
+    giant: true
+
+# Spawnmob
+spawnmob:
+  max: 25
+
+# Flatlands
+flatlands:
+  generate: true
+
+  # Flatlands generation parameters - Uses CleanroomGenerator syntax - http://dev.bukkit.org/server-mods/cleanroomgenerator/
+  generate_params: 16,stone,32,dirt,1,grass_block
+
+# Admin-Only Mode
+admin_only_mode: false
+
+# Toggle Chat
+toggle_chat: true
+
+# Host Sender Names - Names that indicate automated services or host-based consoles you want to block from using some commands.
+# Make sure these are all lower-case.
+host_sender_names:
+  - rcon
+  - console
+
+# Announcer
+announcer:
+  enabled: true
+
+  # Interval between announcements, in seconds.
+  interval: 600
+
+  # Prefix for all announcements
+  prefix: '&5[&eTotalFreedom&5] &b'
+
+  announcements:
+    - 'Be sure to visit our forums at &6https://forum.totalfreedom.me'
+    - 'You can always review the server rules here: &6https://forum.totalfreedom.me/d/7-server-conduct-policy'
+    - 'If you are not OP, be sure to ask!'
+    - 'Want to join our SMP server? You can using &6/smp-01'
+    - 'Somebody breaking the rules? Report it! &6/report <user> <reason>'
+    - 'Griefing is not allowed!'
+    - 'Hacked clients are allowed!'
+    - 'Interested in becoming admin? Do &6/admininfo &b for more information!'
+    - 'You may view all online admins via &6/list -a'
+    - 'Save your buildings via WorldEdit! &6https://totalfreedom.me&b for more information!'
+    - 'Wild1145 / Ryan is the owner of TotalFreedom.'
+    - 'Server lagging? Check the lag via &6/tps'
+    - 'Player vs player while in creative or god mode is forbidden!'
+    - 'Spawn killing is forbidden!'
+    - 'Invisible potions are allowed!'
+    - 'Serial griefing and trolling will result in a permanent ban!'
+    - 'All forms of discrimination are strictly forbidden!'
+    - 'Join our Discord server! https://discord.com/invite/PW4savJR9a'
+    - 'Remember to save your hotbar, otherwise you may lose your items!'
+    - 'Link your discord account with &6/linkdiscord for extra features!'
+ #   - 'Check out our reddit at &6https://www.reddit.com/r/TotalFreedom/ &byou can even link your account!'
+    - 'Want to see cool builds? Check out our Master Builder World with &6/mbworld'
+    - 'Be sure to follow our twitter for all the latest updates. &6https://twitter.com/totalfreedommc'
+
+# What to display in the admininfo command.
+admininfo:
+  - '&bHow to apply for an admin position on the TotalFreedom Server:'
+  - ' &6- Do not ask for admin in game'
+  - ' &2- Be helpful within the server'
+  - ' &6- Report those breaking the rules'
+  - ' &2- And apply on our forums at the link:'
+  - '&9https://forum.totalfreedom.me/d/45-admin-application-template'
+
+# What to display in the vote command.
+votinginfo:
+  - '&bVoting Links:'
+  - ' &2- https://minecraft-mp.com/server/228386/vote/'
+#  - ' &2- https://minecraft-server-list.com/server/443272/vote/'
+  - ' &6- https://topg.org/Minecraft/in-599712'
+  - ' &2- https://minecraftlist.org/vote/18975'
+  - ' &6- https://minecraftservers.org/vote/595721'
+  - ' &2- https://topservers.com/minecraft/in-1275'
+  - ' &6- https://topmcservers.com/server/681/vote'
+  - ' &2- https://minecraft.buzz/server/1024&tab=vote'
+
+# What to display in the Master Builder info command.
+masterbuilderinfo:
+  - '&bHow to apply for Master Builder on the TotalFreedom Server:'
+  - ' &6- Do not ask for Master Builder in game'
+  - ' &2- Screenshot some of your previous builds (be ready to prove that the builds are yours)'
+  - ' &6- Copy the template and create a thread on our forums'
+  - ' &2- Template:'
+  - '&9https://forum.totalfreedom.me/d/336-master-builder-application-process'
+
+# What new players will see upon joining for the first time.
+first_join_info:
+  enabled: true
+  text:
+    - "&6Welcome to TotalFreedom -- the original Free-OP server!"
+    - "&eThe server's name doesn't mean we have no rules. Do &6/rules &efor a list of them."
+    - "&aNeed help getting started? Do &2/help &aor a list of commands!"
+
+# Famous players - cannot be banned by username
+famous_players:
+  - honeydew
+  - xephos
+  - captainsparklez
+  - truemu
+  - kiershar
+  - fvdisco
+  - sethbling
+  - gamechap
+  - bertiechap
+  - vechs
+  - antvenom
+  - chimneyswift
+  - deadmau5
+  - etho
+  - ethoslab
+  - skydoesminecraft
+  - skythekidrs
+  - tobyturner
+  - xxslyfoxhoundxx
+  - paulsoaresjr
+  - sips_
+  - deadlox
+  - xxslyxx
+  - jeromeasf
+  - grum
+  - evilseph
+  - cavemanfilms
+  - herobrine
+  - whiteboy7thst
+  - stampylonghead
+  - stampylongnose
+  - dantdm
+  - gizzy14gazza
+  - furiousdestroyer
+  - pewdie
+  - thecampingrusher
+  - logdotzip
+  - ssundee
+  - mrcrainer
+  - achileis
+  - donibobes
+  - itsjerry
+  - itsharry
+  - bebopvox
+  - clankstar
+  - jollyajax
+  - b0xx3r
+  - vareide
+  - defek7
+  - strutt20
+  - appleg
+  - sterling_
+  - hypixel
+  - huskymudkipz
+  - setosorcerer
+  - slamacow
+  - mrcrayfish
+  - zexyzek
+  - synhd
+  - syndicate
+  - bajancanadian
+  - actennisac
+  - bodil40
+  - trumu
+  - huskymudkipz
+  - dantdm
+  - skeppy
+  - badboyhalo
+  # Mojang staff below this line
+  - aeplh
+  - amir343
+  - angryem
+  - ashrafi
+  - binni
+  - blurpi
+  - bopogamel
+  - boq
+  - c418
+  - carlmanneh
+  - carnalizer
+  - carramel
+  - darngeek
+  - dinnerbone
+  - eldrone
+  - elevenen
+  - el_hefe_
+  - engst
+  - excitedze
+  - frukthamster
+  - fry_
+  - grumm
+  - hampus
+  - helloiammarsh
+  - hey
+  - hoodad
+  - ianna_na_na
+  - jeb_
+  - jonkagstrom
+  - kappe
+  - klumpig
+  - krisjelbring
+  - ladyagnes
+  - lisa
+  - mahuldur
+  - mansolson
+  - marc
+  - marc_irl
+  - masseffect
+  - midnightenforcer
+  - minecraftchick
+  - modhelius
+  - moesh
+  - mojangjonas
+  - mojangsta
+  - mollstam
+  - neonmaster
+  - olle
+  - olofcarlson
+  - phreakholm
+  - poipoichen
+  - pretto
+  - profmobius
+  - razzleberryfox
+  - searge
+  - searge_dp
+  - shoghicp
+  - slicedlime
+  - sockerpappan
+  - themogminer
+  - theopard
+  - theputtman
+  - tom__m
+  - vaktis
+  - volgar
+  - vubui
+  - xlson
+  - xsson
+  - yoloswag4lyfe
+  - zeeraw
+  - _alcatras
+  - _tommo_
+  - ____fox____
+
+# Pet Protect - Prevent tamed pets from being killed.
+petprotect:
+  enabled: true
+
+# Logviewer
+logs:
+  url: ''
+  secret: ''
+
+# Mojang service checker
+service_checker_url: http://status.mojang.com/check
+
+# HTTPD server
+httpd:
+  enabled: true
+  host: play.totalfreedom.me
+  port: 28966
+  public_folder: ./public_html
+
+# Inactivity Auto-Kick (Requires Essentials)
+autokick:
+  enabled: true
+
+  # Percentage of server player capacity used at which players will be automatically kicked for being inactive. Range: 0.0 - 1.0
+  threshold: 0.9
+
+  # Time, in seconds, after which a player should be kicked when inactive
+  time: 120
+
+# Blocked Chat Codes - Use &code,&code2,&code3 (No spaces)
+blocked_chatcodes: '&0,&k,&m,&n'
+
+# Enables certain things like debug logs and console bypasses
+developer_mode: false
+
+# AntiSpam Time (minutes)
+antispam_minutes: 2
