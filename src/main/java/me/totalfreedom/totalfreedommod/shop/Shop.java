@@ -79,7 +79,7 @@ public class Shop extends FreedomService
 
         reactionStartTime = new Date();
 
-        countdownBar = server.createBossBar(reactionString, BarColor.GREEN, BarStyle.SOLID);
+        countdownBar = server.createBossBar(reactionString, BarColor.RED, BarStyle.SOLID);
         for (Player player : server.getOnlinePlayers())
         {
             countdownBar.addPlayer(player);
@@ -192,7 +192,7 @@ public class Shop extends FreedomService
         ItemStack clear = new ItemStack(Material.BARRIER);
         ItemMeta meta = clear.getItemMeta();
         assert meta != null;
-        meta.setDisplayName(ChatColor.RED + "Clear login message");
+        meta.setDisplayName(ChatColor.RED + "Remove login message");
         clear.setItemMeta(meta);
         gui.setItem(35, clear);
         return gui;
