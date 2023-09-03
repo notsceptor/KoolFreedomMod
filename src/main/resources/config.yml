@@ -124,7 +124,7 @@ shop:
   prefix: '&8[&eKool Shop&8]'
 
   # How many coins to voters get per vote?
-  coins_per_vote: 20
+  coins_per_vote: 10
 
   # Chat reactions
   reactions:
@@ -166,14 +166,14 @@ shop:
 
   # Item prices
   prices:
-    grappling_hook: 100
-    lightning_rod: 1000
+    grappling_hook: 200
+    lightning_rod: 750
     fire_ball: 500
-    rideable_pearl: 700
+    rideable_pearl: 650
     stacking_potato: 300
-    clown_fish: 1500
-    login_messages: 5000
-    rainbow_trail: 1500
+    clown_fish: 750
+    login_messages: 1500
+    rainbow_trail: 2000
 
 # Admin list
 adminlist:
