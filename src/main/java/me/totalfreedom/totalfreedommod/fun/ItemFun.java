@@ -199,7 +199,7 @@ public class ItemFun extends FreedomService
                 {
                     player.getWorld().strikeLightning(targetBlock.getLocation());
                 }
-                cooldown(player, ShopItem.LIGHTNING_ROD, 10);
+                cooldown(player, ShopItem.LIGHTNING_ROD, 0);
                 break;
             }
 
