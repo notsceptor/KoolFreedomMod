@@ -167,7 +167,7 @@ shop:
   # Item prices
   prices:
     grappling_hook: 200
-    lightning_rod: 750
+    lightning_rod: 1500
     fire_ball: 500
     rideable_pearl: 650
     stacking_potato: 300

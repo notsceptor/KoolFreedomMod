@@ -74,7 +74,7 @@ public class Command_doom extends FreedomCommand
 
         // Ban player
         Ban ban = Ban.forPlayer(player, sender);
-        ban.setReason((reason == null ? "You can no longer play as Luigi." : reason));
+        ban.setReason((reason == null ? "HAHA YOU'RE BANNED" : reason));
         final String kickReason = (reason == null ? "You have been permanently banned\n    Do not return." : reason);
         ban.addIp(ip);
         ban.setExpiryUnix(-1);

@@ -40,7 +40,7 @@ public class DiscordToAdminChatListener extends ListenerAdapter
             Message msg = event.getMessage();
             String mediamessage = ChatColor.YELLOW + "[Media]";
 
-            StringBuilder logmessage = new StringBuilder(ChatColor.DARK_GRAY + "[" + ChatColor.DARK_AQUA + "Discord" + ChatColor.DARK_GRAY + "] " + ChatColor.RESET);
+            StringBuilder logmessage = new StringBuilder(ChatColor.DARK_GRAY + "[" + ChatColor.DARK_AQUA + "Discord AdminChat" + ChatColor.DARK_GRAY + "] " + ChatColor.RESET);
             String lm = ChatColor.DARK_RED + member.getEffectiveName() + " "
                     + ChatColor.DARK_GRAY + tag + ChatColor.DARK_GRAY
                     + ChatColor.WHITE + ": " + ChatColor.GOLD + FUtil.colorize(msg.getContentDisplay());
@@ -56,7 +56,7 @@ public class DiscordToAdminChatListener extends ListenerAdapter
 
             Bukkit.getOnlinePlayers().stream().filter(player -> TotalFreedomMod.getPlugin().al.isAdmin(player)).forEach(player ->
             {
-                StringBuilder message = new StringBuilder(ChatColor.DARK_GRAY + "[" + ChatColor.DARK_AQUA + "Discord" + ChatColor.DARK_GRAY + "] " + ChatColor.RESET);
+                StringBuilder message = new StringBuilder(ChatColor.DARK_GRAY + "[" + ChatColor.DARK_AQUA + "Discord AdminChat" + ChatColor.DARK_GRAY + "] " + ChatColor.RESET);
 
                 ComponentBuilder builder = new ComponentBuilder(message.toString());
 
@@ -129,6 +129,7 @@ public class DiscordToAdminChatListener extends ListenerAdapter
         {
             return Title.ASSTEXEC;
         }
+        // System Admins
         else if (member.getRoles().contains(server.getRoleById(ConfigEntry.DISCORD_SYSADMIN_ROLE_ID.getString())))
         {
             return Title.SYSADMIN;
