@@ -83,10 +83,6 @@ public class RankManager extends FreedomService
             return Title.DEVELOPER;
         }
 
-        if (plugin.al.isVerifiedAdmin(player))
-        {
-            return Title.VERIFIED_ADMIN;
-        }
 
         // Master builders show up if they are not an admin
         if (plugin.pl.getData(player).isMasterBuilder() && !plugin.al.isAdmin(player))
