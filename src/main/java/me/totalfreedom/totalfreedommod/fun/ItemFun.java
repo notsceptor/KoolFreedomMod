@@ -212,7 +212,7 @@ public class ItemFun extends FreedomService
 
                 if (onCooldown(player, ShopItem.FIRE_BALL))
                 {
-                    player.sendMessage(ChatColor.RED + "You're currently on a cool-down for 5 seconds.");
+                    player.sendMessage(ChatColor.RED + "You're currently on a cool-down for 10 seconds.");
                     break;
                 }
 
@@ -220,7 +220,7 @@ public class ItemFun extends FreedomService
                 Entity fireball = player.getWorld().spawnEntity(player.getLocation(), EntityType.FIREBALL);
                 FIRE_BALL_UUIDS.add(fireball.getUniqueId());
                 fireball.setVelocity(player.getLocation().getDirection().multiply(2));
-                cooldown(player, ShopItem.FIRE_BALL, 5);
+                cooldown(player, ShopItem.FIRE_BALL, 10);
                 break;
             }
 
