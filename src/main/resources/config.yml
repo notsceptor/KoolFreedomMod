@@ -162,7 +162,7 @@ shop:
     - '%name% is the %rank% who just exists'
     - '%name% based cringe poggers based based %rank%'
     - '%name% thinks that &dWindows Server 2019 &bis the best server OS'
-    - '%name% is %art% %coloredrank% and a &4&lDark Side worshipper.'
+    - '%name% is %art% %coloredrank%&b and a &4&lDark Side worshipper.'
 
   # Item prices
   prices:
@@ -172,7 +172,7 @@ shop:
     rideable_pearl: 650
     stacking_potato: 300
     clown_fish: 750
-    login_messages: 1500
+    login_messages: 2000
     rainbow_trail: 2000
 
 # Admin list
