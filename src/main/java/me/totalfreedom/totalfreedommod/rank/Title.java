@@ -6,12 +6,12 @@ public enum Title implements Displayable
 {
 
     MASTER_BUILDER("a", "Master Builder", "Master Builders", ChatColor.DARK_AQUA, org.bukkit.ChatColor.DARK_AQUA, "MB", true, true),
-    EXECUTIVE("an", "Executive", "Executives", ChatColor.RED, org.bukkit.ChatColor.RED, "Exec", true, true),
-    ASSTEXEC("an", "Assistant Executive", "Assistant Executives", ChatColor.RED, org.bukkit.ChatColor.RED, "Asst Exec", true, true),
+    EXECUTIVE("an", "Executive", "Executives", ChatColor.DARK_RED, org.bukkit.ChatColor.DARK_RED, "Exec", true, true),
+    ASSTEXEC("an", "Assistant Executive", "Assistant Executives", ChatColor.DARK_RED, org.bukkit.ChatColor.DARK_RED, "Asst Exec", true, true),
     DEVELOPER("a", "Developer", "Devlopers", ChatColor.DARK_PURPLE, org.bukkit.ChatColor.DARK_PURPLE, "Dev", true, true),
     SYSADMIN("a", "System Administrator", "Sys Admins", ChatColor.DARK_GREEN, org.bukkit.ChatColor.DARK_GREEN, "Sys Admin", true, true),
     COOWNER("the", "Co-Owner", "Co-Owners", ChatColor.LIGHT_PURPLE, org.bukkit.ChatColor.LIGHT_PURPLE, "Co-Owner", true, true),
-    OWNER("the", "Owner", "Owners", ChatColor.DARK_RED, org.bukkit.ChatColor.DARK_RED, "Owner", true, true);
+    OWNER("the", "Owner", "Owners", ChatColor.RED, org.bukkit.ChatColor.RED, "Owner", true, true);
 
 
     private final String article;
