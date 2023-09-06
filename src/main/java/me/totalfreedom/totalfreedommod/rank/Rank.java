@@ -8,7 +8,7 @@ public enum Rank implements Displayable
     NON_OP("a", "Non-Op", Type.PLAYER, "", "Non-Ops", ChatColor.WHITE, null, false, false),
     OP("an", "Operator", Type.PLAYER, "OP", "Operators", ChatColor.GREEN, null, false, false),
     SUPER("a", "Super Admin", Type.ADMIN, "SA", "Super Admins", ChatColor.AQUA, org.bukkit.ChatColor.AQUA, true, true),
-    SENIOR("a", "Senior Admin", Type.ADMIN, "SrA", "Senior Administrators", ChatColor.GOLD, org.bukkit.ChatColor.GOLD, true, true),
+    SENIOR("a", "Senior Admin", Type.ADMIN, "SrA", "Senior Admins", ChatColor.GOLD, org.bukkit.ChatColor.GOLD, true, true),
     CONSOLE("the", "CONSOLE", Type.ADMIN_CONSOLE, "CONSOLE", "Console", ChatColor.BLUE, null, false, false);
 
     private final Type type;
