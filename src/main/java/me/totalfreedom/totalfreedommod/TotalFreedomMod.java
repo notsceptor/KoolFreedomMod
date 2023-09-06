@@ -111,7 +111,6 @@ public class TotalFreedomMod extends JavaPlugin
     public EssentialsBridge esb;
     public LibsDisguisesBridge ldb;
     public CoreProtectBridge cpb;
-    public TFGuildsBridge tfg;
     public WorldEditBridge web;
     public WorldGuardBridge wgb;
 
@@ -327,7 +326,6 @@ public class TotalFreedomMod extends JavaPlugin
             cpb = new CoreProtectBridge();
             esb = new EssentialsBridge();
             ldb = new LibsDisguisesBridge();
-            tfg = new TFGuildsBridge();
             web = new WorldEditBridge();
             wgb = new WorldGuardBridge();
         }
