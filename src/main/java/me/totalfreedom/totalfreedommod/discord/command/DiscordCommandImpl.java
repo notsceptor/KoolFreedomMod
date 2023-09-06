@@ -7,7 +7,7 @@ public abstract class DiscordCommandImpl implements DiscordCommand
     @Override
     public boolean canExecute(Member member)
     {
-        //return !isAdmin() || member.getRoles().stream().filter((role -> role.getName().toLowerCase().contains("admin") && !role.getName().toLowerCase().contains("discord"))).toList().size() > 0;
+        // TODO Implement administrator checks if/when any administrative Discord commands are added to the bot
         return !isAdmin();
     }
 }
