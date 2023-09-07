@@ -1,12 +1,15 @@
 package me.totalfreedom.totalfreedommod.banning;
 
 import com.google.common.collect.Lists;
-import me.totalfreedom.totalfreedommod.config.IConfig;
-import me.totalfreedom.totalfreedommod.util.FLog;
-import org.bukkit.configuration.ConfigurationSection;
-
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
+import me.totalfreedom.totalfreedommod.config.IConfig;
+import me.totalfreedom.totalfreedommod.util.FLog;
+import me.totalfreedom.totalfreedommod.util.FUtil;
+import org.bukkit.configuration.ConfigurationSection;
 
 public class IndefiniteBan implements IConfig
 {
@@ -14,6 +17,7 @@ public class IndefiniteBan implements IConfig
     private String username = null;
     private UUID uuid = null;
     private String reason = null;
+    private Date expiry = null;
 
     public IndefiniteBan()
     {
@@ -23,6 +27,7 @@ public class IndefiniteBan implements IConfig
     public void loadFrom(ConfigurationSection cs)
     {
         this.username = cs.getName();
+
         try
         {
             String strUUID = cs.getString("uuid", null);
@@ -36,9 +41,20 @@ public class IndefiniteBan implements IConfig
         {
             FLog.warning("Failed to load indefinite banned UUID for " + this.username + ". Make sure the UUID is in the correct format with dashes.");
         }
+
         this.ips.clear();
         this.ips.addAll(cs.getStringList("ips"));
         this.reason = cs.getString("reason", null);
+
+        String date = cs.getString("expiry", null);
+        try
+        {
+            this.expiry = date != null ? new SimpleDateFormat("yyyy-MM-dd").parse(date) : null;
+        }
+        catch (ParseException ex)
+        {
+            FLog.warning("Failed to load indefinite banned expiry for " + this.username + ". Make sure the expiry is in the correct format (yyyy-MM-dd).");
+        }
     }
 
     @Override
@@ -86,5 +102,25 @@ public class IndefiniteBan implements IConfig
     public void setReason(String reason)
     {
         this.reason = reason;
+    }
+
+    public Date getExpiry()
+    {
+        return expiry;
+    }
+
+    public void setExpiry(Date date)
+    {
+        this.expiry = date;
+    }
+
+    public boolean hasExpiry()
+    {
+        return this.expiry != null;
+    }
+
+    public boolean isExpired()
+    {
+        return hasExpiry() && expiry.before(new Date(FUtil.getUnixTime()));
     }
 }
