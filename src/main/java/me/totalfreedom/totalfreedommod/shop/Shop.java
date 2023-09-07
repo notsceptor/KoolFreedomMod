@@ -100,9 +100,9 @@ public class Shop extends FreedomService
                 else
                 {
                     countdownBar.setProgress(seconds / max);
-                    if (!countdownBar.getColor().equals(BarColor.YELLOW) && seconds / max <= 0.25)
+                    if (!countdownBar.getColor().equals(BarColor.RED) && seconds / max <= 0.25)
                     {
-                        countdownBar.setColor(BarColor.YELLOW);
+                        countdownBar.setColor(BarColor.RED);
                     }
                 }
             }
