@@ -104,7 +104,6 @@ public class TotalFreedomMod extends JavaPlugin
     public EntityWiper ew;
     public Sitter st;
     public VanishHandler vh;
-    public Pterodactyl ptero;
     //
     // Bridges
     public BukkitTelnetBridge btb;
@@ -300,7 +299,6 @@ public class TotalFreedomMod extends JavaPlugin
             ew = new EntityWiper();
             st = new Sitter();
             vh = new VanishHandler();
-            ptero = new Pterodactyl();
         }
 
         private void initAdminUtils()
