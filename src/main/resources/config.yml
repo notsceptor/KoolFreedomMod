@@ -8,7 +8,7 @@ server:
   address: koolfreedom.eu.org
 
   # Shown at the server list - Please note that support for %mcversion% has been withdrawn
-  motd: KoolFreedom &cFreeOP!\n&8&k1111111111111
+  motd: KoolFreedom FreeOP
 
   # Every word in the MOTD will be a different color unless prefixed by a color code
   colorful_motd: true
