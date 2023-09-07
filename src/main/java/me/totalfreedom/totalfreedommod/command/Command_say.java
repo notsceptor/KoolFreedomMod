@@ -40,8 +40,8 @@ public class Command_say extends FreedomCommand
             }
         }
 
-        FUtil.bcastMsg(String.format("[Kool:%s] %s", sender.getName(), message), ChatColor.LIGHT_PURPLE);
-        plugin.dc.messageChatChannel(String.format("[Kool:%s] \u00BB %s", sender.getName(), message));
+        FUtil.bcastMsg(String.format("[KoolFreedom:%s] %s", sender.getName(), message), ChatColor.LIGHT_PURPLE);
+        plugin.dc.messageChatChannel(String.format("[KoolFreedom:%s] \u00BB %s", sender.getName(), message));
         return true;
     }
 }

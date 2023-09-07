@@ -22,7 +22,7 @@ public class Command_glow extends FreedomCommand
         }
         else
         {
-            PotionEffect glow = new PotionEffect(PotionEffectType.GLOWING, 1000000, 1, false, false);
+            PotionEffect glow = new PotionEffect(PotionEffectType.GLOWING, 999999, 1, false, false);
             playerSender.addPotionEffect(glow);
             glowing = true;
         }
