@@ -79,7 +79,7 @@ public class Shop extends FreedomService
 
         reactionStartTime = new Date();
 
-        countdownBar = server.createBossBar(reactionString, BarColor.RED, BarStyle.SOLID);
+        countdownBar = server.createBossBar(reactionString, BarColor.YELLOW, BarStyle.SOLID);
         for (Player player : server.getOnlinePlayers())
         {
             countdownBar.addPlayer(player);
