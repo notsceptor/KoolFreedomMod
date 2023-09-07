@@ -29,6 +29,7 @@ server:
   # All players who show up as owner
   owners:
     - gamingto12
+    - scripthead
   coowners:
     - feminuker
   developers:
