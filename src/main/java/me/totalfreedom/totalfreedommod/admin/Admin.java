@@ -27,7 +27,6 @@ public class Admin
     private Boolean commandSpy = false;
     private Boolean potionSpy = false;
     private String acFormat = null;
-    private String pteroID = null;
 
     public Admin(Player player)
     {
@@ -48,7 +47,6 @@ public class Admin
             this.commandSpy = resultSet.getBoolean("command_spy");
             this.potionSpy = resultSet.getBoolean("potion_spy");
             this.acFormat = resultSet.getString("ac_format");
-            this.pteroID = resultSet.getString("ptero_id");
         }
         catch (SQLException e)
         {
@@ -67,8 +65,7 @@ public class Admin
                 .append("- Rank: ").append(rank.getName()).append("\n")
                 .append("- Is Active: ").append(active).append("\n")
                 .append("- Potion Spy: ").append(potionSpy).append("\n")
-                .append("- Admin Chat Format: ").append(acFormat).append("\n")
-                .append("- Pterodactyl ID: ").append(pteroID).append("\n");
+                .append("- Admin Chat Format: ").append(acFormat).append("\n");
 
         return output.toString();
     }
@@ -85,7 +82,6 @@ public class Admin
             put("command_spy", commandSpy);
             put("potion_spy", potionSpy);
             put("ac_format", acFormat);
-            put("ptero_id", pteroID);
         }};
         return map;
     }
@@ -247,15 +243,5 @@ public class Admin
     public void setAcFormat(String acFormat)
     {
         this.acFormat = acFormat;
-    }
-
-    public String getPteroID()
-    {
-        return pteroID;
-    }
-
-    public void setPteroID(String pteroID)
-    {
-        this.pteroID = pteroID;
     }
 }
