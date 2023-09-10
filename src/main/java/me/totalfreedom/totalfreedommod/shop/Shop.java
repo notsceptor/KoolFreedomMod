@@ -125,7 +125,7 @@ public class Shop extends FreedomService
             return;
         }
 
-        FUtil.bcastMsg(prefix + ChatColor.RED + "No one reacted fast enough", false);
+        FUtil.bcastMsg(prefix + ChatColor.RED + "No one cared enough to react.", false);
         startReactionTimer();
     }
 
