@@ -95,7 +95,6 @@ public class Command_saconfig extends FreedomCommand
                     Discord.syncRoles(admin, plugin.pl.getData(admin.getName()).getDiscordID());
                 }
 
-                plugin.ptero.updateAccountStatus(admin);
 
                 msg("Set " + admin.getName() + "'s rank to " + rank.getName());
                 return true;
@@ -193,7 +192,6 @@ public class Command_saconfig extends FreedomCommand
                         Discord.syncRoles(admin, plugin.pl.getData(player).getDiscordID());
                     }
                 }
-                plugin.ptero.updateAccountStatus(admin);
 
                 final FPlayer fPlayer = plugin.pl.getPlayer(player);
                 if (fPlayer.getFreezeData().isFrozen())
@@ -248,7 +246,6 @@ public class Command_saconfig extends FreedomCommand
                     Discord.syncRoles(admin, plugin.pl.getData(adminName).getDiscordID());
                 }
 
-                plugin.ptero.updateAccountStatus(admin);
 
                 return true;
             }

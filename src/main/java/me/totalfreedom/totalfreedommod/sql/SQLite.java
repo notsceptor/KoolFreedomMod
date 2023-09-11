@@ -252,7 +252,6 @@ public class SQLite extends FreedomService
             statement.setBoolean(6, admin.getCommandSpy());
             statement.setBoolean(7, admin.getPotionSpy());
             statement.setString(8, admin.getAcFormat());
-            statement.setString(9, admin.getPteroID());
             statement.executeUpdate();
         }
         catch (SQLException e)
