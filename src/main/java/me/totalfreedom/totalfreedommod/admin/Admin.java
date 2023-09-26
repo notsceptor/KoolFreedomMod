@@ -65,7 +65,7 @@ public class Admin
                 .append("- Rank: ").append(rank.getName()).append("\n")
                 .append("- Is Active: ").append(active).append("\n")
                 .append("- Potion Spy: ").append(potionSpy).append("\n")
-                .append("- Admin Chat Format: ").append(acFormat).append("\n");
+                .append("- Admin Chat Format: ").append(acFormat);
 
         return output.toString();
     }
