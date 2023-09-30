@@ -5,7 +5,7 @@
 
     <groupId>me.totalfreedom</groupId>
     <artifactId>TotalFreedomMod</artifactId>
-    <version>CUSTOM-2023.09</version>
+    <version>CUSTOM-2023.10</version>
     <packaging>jar</packaging>
 
     <properties>
