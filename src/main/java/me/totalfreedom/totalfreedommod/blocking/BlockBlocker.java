@@ -2,12 +2,9 @@ package me.totalfreedom.totalfreedommod.blocking;
 
 import me.totalfreedom.totalfreedommod.FreedomService;
 import me.totalfreedom.totalfreedommod.config.ConfigEntry;
-import me.totalfreedom.totalfreedommod.util.Groups;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
-import org.bukkit.block.Banner;
 import org.bukkit.block.Skull;
-import org.bukkit.block.banner.Pattern;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -15,8 +12,6 @@ import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
-
-import java.util.List;
 
 public class BlockBlocker extends FreedomService
 {
@@ -72,7 +67,7 @@ public class BlockBlocker extends FreedomService
             }
             case STRUCTURE_BLOCK:
             {
-                if (!ConfigEntry.ALLOW_STRUCTURE_BLOCKS.getBoolean())
+                if (!ConfigEntry.ALLOW_MASTERBLOCKS.getBoolean())
                 {
                     player.sendMessage(ChatColor.GRAY + "Structure blocks are disabled.");
                     player.getInventory().setItem(player.getInventory().getHeldItemSlot(), new ItemStack(Material.COOKIE, 1));
@@ -82,7 +77,7 @@ public class BlockBlocker extends FreedomService
             }
             case JIGSAW:
             {
-                if (!ConfigEntry.ALLOW_JIGSAWS.getBoolean())
+                if (!ConfigEntry.ALLOW_MASTERBLOCKS.getBoolean())
                 {
                     player.sendMessage(ChatColor.GRAY + "Jigsaws are disabled.");
                     player.getInventory().setItem(player.getInventory().getHeldItemSlot(), new ItemStack(Material.COOKIE, 1));
@@ -90,6 +85,16 @@ public class BlockBlocker extends FreedomService
                 }
                 break;
             }
+            case REPEATING_COMMAND_BLOCK:
+            case CHAIN_COMMAND_BLOCK:
+            case COMMAND_BLOCK:
+                if (!ConfigEntry.ALLOW_MASTERBLOCKS.getBoolean())
+                {
+                    player.sendMessage(ChatColor.GRAY + "Command blocks are disabled.");
+                    player.getInventory().setItem(player.getInventory().getHeldItemSlot(), new ItemStack(Material.COOKIE, 1));
+                    event.setCancelled(true);
+                }
+                break;
             case GRINDSTONE:
             {
                 if (!ConfigEntry.ALLOW_GRINDSTONES.getBoolean())
@@ -176,18 +181,6 @@ public class BlockBlocker extends FreedomService
             {
                 // Do nothing
                 break;
-            }
-        }
-
-        if (Groups.BANNERS.contains(event.getBlockPlaced().getType()))
-        {
-            Banner banner = (Banner)event.getBlockPlaced().getState();
-            List<Pattern> patterns = banner.getPatterns();
-
-            if (patterns.size() >= 2)
-            {
-                banner.setPatterns(patterns.subList(0, 2));
-                player.sendMessage(ChatColor.GRAY + "Your banner had too many patterns on it, so some were removed.");
             }
         }
     }

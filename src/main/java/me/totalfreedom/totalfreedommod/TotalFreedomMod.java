@@ -146,7 +146,7 @@ public class TotalFreedomMod extends JavaPlugin
     public void onEnable()
     {
         FLog.info("Created by Madgeek1450 and Prozza");
-        FLog.info("Edited by gamingto12 and Aquadraws");
+        FLog.info("Edited by gamingto12, Aquadraws and 0x7694C9");
         FLog.info("Version " + build.version);
         FLog.info("Compiled " + build.date + " by " + build.author);
 

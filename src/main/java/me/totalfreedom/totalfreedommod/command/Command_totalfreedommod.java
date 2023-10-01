@@ -51,7 +51,7 @@ public class Command_totalfreedommod extends FreedomCommand
         msg("TotalFreedomMod for 'Total Freedom', the original all-op server.", ChatColor.GOLD);
         msg("Running on " + ConfigEntry.SERVER_NAME.getString() + ".", ChatColor.GOLD);
         msg("Created by Madgeek1450 and Prozza.", ChatColor.GOLD);
-        msg("Edited by gamingto12 and Aquadraws.", ChatColor.LIGHT_PURPLE);
+        msg("Edited by gamingto12, Aquadraws and 0x7694C9.", ChatColor.LIGHT_PURPLE);
         msg(String.format("Version "
                         + ChatColor.BLUE + "%s - %s Build %s " + ChatColor.GOLD + "("
                         + ChatColor.BLUE + "%s" + ChatColor.GOLD + ")",

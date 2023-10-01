@@ -26,8 +26,6 @@ public enum ConfigEntry
     ALLOW_BELLS(Boolean.class, "allow.bells"),
     ALLOW_ARMOR_STANDS(Boolean.class, "allow.armorstands"),
     ALLOW_MINECARTS(Boolean.class, "allow.minecarts"),
-    ALLOW_STRUCTURE_BLOCKS(Boolean.class, "allow.structureblocks"),
-    ALLOW_JIGSAWS(Boolean.class, "allow.jigsaws"),
     ALLOW_GRINDSTONES(Boolean.class, "allow.grindstones"),
     ALLOW_JUKEBOXES(Boolean.class, "allow.jukeboxes"),
     ALLOW_SPAWNERS(Boolean.class, "allow.spawners"),
@@ -36,6 +34,9 @@ public enum ConfigEntry
     AUTO_TP(Boolean.class, "allow.auto_tp"),
     AUTO_CLEAR(Boolean.class, "allow.auto_clear"),
     ALLOW_GRAVITY(Boolean.class, "allow.gravity"),
+    ALLOW_MASTERBLOCKS(Boolean.class, "allow.masterblocks"),
+    ALLOW_BOOKS(Boolean.class, "allow.books"),
+    ALLOW_ITEM_DROPS(Boolean.class, "allow.item_drops"),
     //
     BLOCKED_CHATCODES(String.class, "blocked_chatcodes"),
     //

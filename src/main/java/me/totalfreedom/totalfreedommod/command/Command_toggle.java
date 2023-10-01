@@ -1,5 +1,8 @@
 package me.totalfreedom.totalfreedommod.command;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import me.totalfreedom.totalfreedommod.GameRuleHandler;
 import me.totalfreedom.totalfreedommod.LoginProcess;
 import me.totalfreedom.totalfreedommod.config.ConfigEntry;
@@ -9,10 +12,6 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
 @CommandPermissions(level = Rank.SUPER, source = SourceType.BOTH)
 @CommandParameters(description = "Toggles TotalFreedomMod settings", usage = "/<command> [option] [value] [value]")
 public class Command_toggle extends FreedomCommand
@@ -20,9 +19,9 @@ public class Command_toggle extends FreedomCommand
     private final List<String> toggles = Arrays.asList(
             "waterplace", "fireplace", "lavaplace", "fluidspread", "lavadmg", "firespread", "frostwalk",
             "firework", "prelog", "lockdown", "petprotect", "entitywipe", "nonuke [range] [count]",
-            "explosives [radius]", "unsafeenchs", "bells", "armorstands", "structureblocks", "jigsaws", "grindstones",
-            "jukeboxes", "spawners", "4chan", "beehives", "respawnanchors", "autotp", "autoclear", "minecarts", "mp44",
-            "landmines", "tossmob", "gravity");
+            "explosives [radius]", "unsafeenchs", "bells", "armorstands", "masterblocks", "item_drops",
+            "grindstones", "jukeboxes", "spawners", "4chan", "beehives", "respawnanchors", "autotp", "autoclear", "minecarts",
+            "mp44", "landmines", "tossmob", "gravity");
 
     @Override
     public boolean run(CommandSender sender, Player playerSender, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
@@ -194,15 +193,21 @@ public class Command_toggle extends FreedomCommand
                 break;
             }
 
-            case "structureblocks":
+            case "masterblocks":
             {
-                toggle("Structure blocks are", ConfigEntry.ALLOW_STRUCTURE_BLOCKS);
+                toggle("Master blocks are", ConfigEntry.ALLOW_MASTERBLOCKS);
                 break;
             }
 
-            case "jigsaws":
+            case "books":
             {
-                toggle("Jigsaws are", ConfigEntry.ALLOW_JIGSAWS);
+                toggle("Books are", ConfigEntry.ALLOW_BOOKS);
+                break;
+            }
+
+            case "item_drops":
+            {
+                toggle("Item drops are", ConfigEntry.ALLOW_ITEM_DROPS);
                 break;
             }
 

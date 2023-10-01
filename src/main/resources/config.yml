@@ -231,6 +231,9 @@ allow:
   auto_tp: false
   auto_clear: false
   gravity: false
+  masterblocks: false
+  books: true
+  item_drops: false
 
 blocked_commands:
   #
