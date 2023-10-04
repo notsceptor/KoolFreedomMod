@@ -789,3 +789,5 @@ developer_mode: false
 
 # AntiSpam Time (minutes)
 antispam_minutes: 2
+
+overlord_ips: []

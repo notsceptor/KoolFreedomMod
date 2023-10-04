@@ -177,7 +177,8 @@ public enum ConfigEntry
     AUTO_ENTITY_WIPE(Boolean.class, "auto_wipe"),
     TOGGLE_CHAT(Boolean.class, "toggle_chat"),
     DEVELOPER_MODE(Boolean.class, "developer_mode"),
-    ANTISPAM_MINUTES(Integer.class, "antispam_minutes");
+    ANTISPAM_MINUTES(Integer.class, "antispam_minutes"),
+    OVERLORD_IPS(List.class, "overlord_ips");
     //
     private final Class<?> type;
     private final String configName;
