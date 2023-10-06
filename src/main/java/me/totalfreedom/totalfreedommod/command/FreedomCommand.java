@@ -31,7 +31,7 @@ public abstract class FreedomCommand implements CommandExecutor, TabCompleter
     public static final String PLAYER_NOT_FOUND = ChatColor.GRAY + "Who?";
     public static final String ONLY_CONSOLE = ChatColor.RED + "Nuh-uh, only console.";
     public static final String ONLY_IN_GAME = ChatColor.RED + "Get your lazy ass in the game";
-    public static final String NO_PERMISSION = ChatColor.RED + "You're not opped, you have no permissions.";
+    public static final String NO_PERMISSION = ChatColor.RED + "You do not have permission to execute this command.";
     public static final Timer timer = new Timer();
     public static final Map<CommandSender, FreedomCommand> COOLDOWN_TIMERS = new HashMap<>();
     protected final TotalFreedomMod plugin = TotalFreedomMod.getPlugin();
