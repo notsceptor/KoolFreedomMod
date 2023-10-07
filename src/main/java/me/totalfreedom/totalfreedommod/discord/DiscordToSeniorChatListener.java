@@ -52,7 +52,7 @@ public class DiscordToSeniorChatListener extends ListenerAdapter
 
             Bukkit.getOnlinePlayers().stream().filter(player -> TotalFreedomMod.getPlugin().al.isSeniorAdmin(player)).forEach(player ->
             {
-                StringBuilder message = new StringBuilder(ChatColor.DARK_GRAY + "[" + ChatColor.DARK_AQUA + "Discord AdminChat" + ChatColor.DARK_GRAY + "] " + ChatColor.RESET);
+                StringBuilder message = new StringBuilder(ChatColor.DARK_GRAY + "[" + ChatColor.DARK_AQUA + "Discord SeniorChat" + ChatColor.DARK_GRAY + "] " + ChatColor.RESET);
 
                 ComponentBuilder builder = new ComponentBuilder(message.toString());
 

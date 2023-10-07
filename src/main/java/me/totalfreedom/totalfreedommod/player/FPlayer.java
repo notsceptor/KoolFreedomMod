@@ -71,6 +71,7 @@ public class FPlayer
 
 
     private boolean invSee = false;
+    private boolean inSeniorChat;
 
     public FPlayer(TotalFreedomMod plugin, Player player)
     {
