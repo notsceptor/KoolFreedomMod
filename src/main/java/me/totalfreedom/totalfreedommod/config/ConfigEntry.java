@@ -85,6 +85,7 @@ public enum ConfigEntry
     DISCORD_REPORT_ARCHIVE_CHANNEL_ID(String.class, "discord.report_archive_channel_id"),
     DISCORD_CHAT_CHANNEL_ID(String.class, "discord.chat_channel_id"),
     DISCORD_ADMINCHAT_CHANNEL_ID(String.class, "discord.adminchat_channel_id"),
+    DISCORD_SENIORCHAT_CHANNEL_ID(String.class, "discord.seniorchat_channel_id"),
 
     DISCORD_ROLE_SYNC(Boolean.class, "discord.role_sync"),
     DISCORD_SERVER_ID(String.class, "discord.server_id"),

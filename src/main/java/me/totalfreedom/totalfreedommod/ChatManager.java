@@ -95,6 +95,14 @@ public class ChatManager extends FreedomService
             return;
         }
 
+        // Check for seniorchat
+        if (fPlayer.inSeniorChat())
+        {
+            FSync.seniorChatMessage(player, message);
+            event.setCancelled(true);
+            return;
+        }
+
         // Check for 4chan trigger
         boolean green = ChatColor.stripColor(message).toLowerCase().startsWith(">");
         boolean orange = ChatColor.stripColor(message).toLowerCase().endsWith("<");
@@ -171,6 +179,28 @@ public class ChatManager extends FreedomService
             else
             {
                 player.sendMessage("[" + ChatColor.AQUA + "ADMIN" + ChatColor.WHITE + "] " + ChatColor.DARK_RED + sender.getName() + ChatColor.DARK_GRAY + " [" + getColoredTag(display) + ChatColor.DARK_GRAY + "]" + ChatColor.WHITE + ": " + ChatColor.GOLD + FUtil.colorize(message));
+            }
+        });
+    }
+
+    public void seniorChat(CommandSender sender, String message)
+    {
+        Displayable display = plugin.rm.getDisplay(sender);
+        FLog.info("[SENIOR] " + sender.getName() + " " + display.getTag() + ": " + message, true);
+        plugin.dc.messageSeniorChatChannel(sender.getName() + "\u00BB " + message);
+
+        server.getOnlinePlayers().stream().filter(player -> plugin.al.isSeniorAdmin(player)).forEach(player ->
+        {
+            Admin admin = plugin.al.getAdmin(player);
+            if (!Strings.isNullOrEmpty(admin.getAcFormat())) {
+            String format = admin.getAcFormat();
+            ChatColor color = getColor(display);
+            String msg = format.replace("%name%", sender.getName()).replace("%rank%", display.getAbbr()).replace("%rankcolor%", color.toString()).replace("%msg%", message);
+            player.sendMessage(FUtil.colorize(msg));
+            }
+            else
+            {
+                player.sendMessage("[" + ChatColor.GOLD + "SENIOR" + ChatColor.WHITE + "] " + ChatColor.DARK_RED + sender.getName() + ChatColor.DARK_GRAY + " [" + getColoredTag(display) + ChatColor.DARK_GRAY + "]" + ChatColor.WHITE + ": " + ChatColor.GOLD + FUtil.colorize(message));
             }
         });
     }

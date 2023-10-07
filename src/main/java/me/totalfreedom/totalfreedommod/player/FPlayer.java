@@ -53,6 +53,7 @@ public class FPlayer
     private boolean lockedUp = false;
     private String lastMessage = "";
     private boolean inAdminchat = false;
+    private boolean inSeniorchat = false;
     private boolean allCommandsBlocked = false;
 
 
@@ -125,6 +126,7 @@ public class FPlayer
     {
         this.setCommandSpy(false);
         this.setAdminChat(false);
+        this.setSeniorChat(false);
         this.setFuckoffRadius(0);
     }
 
@@ -375,6 +377,16 @@ public class FPlayer
     public void setAdminChat(boolean inAdminchat)
     {
         this.inAdminchat = inAdminchat;
+    }
+
+    public void setSeniorChat(boolean inSeniorChat)
+    {
+        this.inSeniorChat = inSeniorChat;
+    }
+
+    public boolean inSeniorChat()
+    {
+        return this.inSeniorchat;
     }
 
     public boolean inAdminChat()
@@ -641,9 +653,19 @@ public class FPlayer
         return inAdminchat;
     }
 
+    public boolean isInSeniorchat()
+    {
+        return inSeniorchat;
+    }
+
     public void setInAdminchat(boolean inAdminchat)
     {
         this.inAdminchat = inAdminchat;
+    }
+
+    public void setInSeniorchat(boolean inSeniorchat)
+    {
+        this.inSeniorchat = inSeniorChat;
     }
 
     public boolean isAllCommandsBlocked()

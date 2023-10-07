@@ -2,14 +2,14 @@ package me.totalfreedom.totalfreedommod.command;
 
 import me.totalfreedom.totalfreedommod.player.FPlayer;
 import me.totalfreedom.totalfreedommod.rank.Rank;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-@CommandPermissions(level = Rank.SUPER, source = SourceType.BOTH)
-@CommandParameters(description = "Talk privately with other admins on the server.", usage = "/<command> [message]", aliases = "o,ac,staffchat")
-public class Command_adminchat extends FreedomCommand
+@CommandPermissions(level = Rank.SENIOR, source = SourceType.BOTH)
+@CommandParameters(description = "Allows Senior Administrators to talk in a chat with other senior administrators.", usage = "/<command> [message...]", aliases = "sc,p")
+public class Command_seniorchat extends FreedomCommand
 {
 
     @Override
@@ -19,17 +19,17 @@ public class Command_adminchat extends FreedomCommand
         {
             if (senderIsConsole)
             {
-                msg("You must be in-game to toggle admin chat, it cannot be toggled via CONSOLE or Telnet.");
+                msg("Only in-game players can toggle SeniorChat.");
                 return true;
             }
 
             FPlayer userinfo = plugin.pl.getPlayer(playerSender);
-            userinfo.setAdminChat(!userinfo.inAdminChat());
-            msg("Admin chat turned " + (userinfo.inAdminChat() ? "on" : "off") + ".");
+            userinfo.setSeniorChat(!userinfo.inSeniorChat());
+            msg("Senior chat turned " + (userinfo.inSeniorChat() ? "on" : "off") + ".");
         }
         else
         {
-            plugin.cm.adminChat(sender, StringUtils.join(args, " "));
+            plugin.cm.seniorChat(sender, StringUtils.join(args, " "));
         }
         return true;
     }

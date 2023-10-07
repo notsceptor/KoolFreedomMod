@@ -180,6 +180,7 @@ public class Discord extends FreedomService
                     .addEventListeners(new PrivateMessageListener(),
                             new DiscordToMinecraftListener(),
                             new DiscordToAdminChatListener(),
+                            new DiscordToSeniorChatListener(),
                             new MessageReactionListener(),
                             new ListenerAdapter()
                             {
@@ -435,6 +436,26 @@ public class Discord extends FreedomService
     public void messageAdminChatChannel(String message, boolean system)
     {
         String chat_channel_id = ConfigEntry.DISCORD_ADMINCHAT_CHANNEL_ID.getString();
+
+        String sanitizedMessage = sanitizeChatMessage(message);
+
+        if (sanitizedMessage.isBlank()) return;
+
+        if (enabled && !chat_channel_id.isEmpty())
+        {
+            CompletableFuture<Message> sentMessage = Objects.requireNonNull(bot.getTextChannelById(chat_channel_id)).sendMessage(sanitizedMessage).submit(true);
+            sentMessages.add(sentMessage);
+        }
+    }
+
+    public void messageSeniorChatChannel(String message)
+    {
+        messageSeniorChatChannel(message, false);
+    }
+
+    public void messageSeniorChatChannel(String message, boolean system)
+    {
+        String chat_channel_id = ConfigEntry.DISCORD_SENIORCHAT_CHANNEL_ID.getString();
 
         String sanitizedMessage = sanitizeChatMessage(message);
 

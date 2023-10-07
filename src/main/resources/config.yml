@@ -76,6 +76,8 @@ discord:
   chat_channel_id: ''
   # Channel for Discord to AdminChat and vice-versa
   adminchat_channel_id: ''
+  # Channel for Discord to SeniorChat and vice-versa
+  seniorchat_channel_id: ''
   # Do you want roles to sync with the server?
   role_sync: false
   # Master Builder role ID
