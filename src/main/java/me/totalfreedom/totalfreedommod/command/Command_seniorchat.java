@@ -8,7 +8,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 @CommandPermissions(level = Rank.SENIOR, source = SourceType.BOTH)
-@CommandParameters(description = "Allows Senior Administrators to talk in a chat with other senior administrators.", usage = "/<command> [message...]", aliases = "sc,p")
+@CommandParameters(description = "Allows Senior Administrators to talk in a chat with other senior administrators.", usage = "/<command> [message...]", aliases = "p,sc")
 public class Command_seniorchat extends FreedomCommand
 {
 
