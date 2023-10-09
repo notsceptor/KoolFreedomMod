@@ -57,7 +57,7 @@ public class DiscordToSeniorChatListener extends ListenerAdapter
                 ComponentBuilder builder = new ComponentBuilder(message.toString());
 
                 Admin admin = TotalFreedomMod.getPlugin().al.getAdmin(player);
-                String format = admin.getAcFormat();
+                String format = admin.getScFormat();
                 if (!Strings.isNullOrEmpty(format)) {
                     Displayable display = getDisplay(member);
                     net.md_5.bungee.api.ChatColor color = getColor(display);

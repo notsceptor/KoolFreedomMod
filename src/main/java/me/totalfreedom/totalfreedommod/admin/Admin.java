@@ -27,6 +27,7 @@ public class Admin
     private Boolean commandSpy = false;
     private Boolean potionSpy = false;
     private String acFormat = null;
+    private String scFormat = null;
 
     public Admin(Player player)
     {
@@ -47,6 +48,7 @@ public class Admin
             this.commandSpy = resultSet.getBoolean("command_spy");
             this.potionSpy = resultSet.getBoolean("potion_spy");
             this.acFormat = resultSet.getString("ac_format");
+            this.scFormat = resultSet.getString("sc_format");
         }
         catch (SQLException e)
         {
@@ -65,7 +67,8 @@ public class Admin
                 .append("- Rank: ").append(rank.getName()).append("\n")
                 .append("- Is Active: ").append(active).append("\n")
                 .append("- Potion Spy: ").append(potionSpy).append("\n")
-                .append("- Admin Chat Format: ").append(acFormat);
+                .append("- Admin Chat Format: ").append(acFormat).append("\n")
+                .append("- Senior Chat Format: ").append(scFormat);
 
         return output.toString();
     }
@@ -82,6 +85,7 @@ public class Admin
             put("command_spy", commandSpy);
             put("potion_spy", potionSpy);
             put("ac_format", acFormat);
+            put("sc_format", scFormat);
         }};
         return map;
     }
@@ -244,4 +248,9 @@ public class Admin
     {
         this.acFormat = acFormat;
     }
+    public String getScFormat()
+    {
+        return scFormat;
+    }
+    public void setScFormat(String scFormat) {this.scFormat = scFormat;}
 }

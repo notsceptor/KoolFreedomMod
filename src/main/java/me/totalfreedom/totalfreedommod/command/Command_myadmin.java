@@ -140,7 +140,6 @@ public class Command_myadmin extends FreedomCommand
             }
 
             case "setacformat":
-            case "setscformat":
             {
                 String format = StringUtils.join(args, " ", 1, args.length);
                 target.setAcFormat(format);
@@ -153,12 +152,32 @@ public class Command_myadmin extends FreedomCommand
             }
 
             case "clearacformat":
-            case "clearscformat":
             {
                 target.setAcFormat(null);
                 plugin.al.save(target);
                 plugin.al.updateTables();
                 msg("Cleared admin chat format.", ChatColor.GRAY);
+                return true;
+            }
+
+            case "setscformat":
+            {
+                String format = StringUtils.join(args, " ", 1, args.length);
+                target.setScFormat(format);
+                plugin.al.save(target);
+                plugin.al.updateTables();
+                msg("Set senior chat format to \"" + format + "\".", ChatColor.GRAY);
+                String example = format.replace("%name%", "ExampleSenior").replace("%rank%", Rank.SENIOR.getAbbr()).replace("%rankcolor%", Rank.SENIOR.getColor().toString()).replace("%msg", "This is obviously senior chat");
+                msg(ChatColor.GRAY + "Example: " + FUtil.colorize(example));
+                return true;
+            }
+
+            case "clearscformat":
+            {
+                target.setScFormat(null);
+                plugin.al.save(target);
+                plugin.al.updateTables();
+                msg("Cleared senior chat format.", ChatColor.GRAY);
                 return true;
             }
 
