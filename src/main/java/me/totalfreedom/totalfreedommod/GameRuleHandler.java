@@ -29,12 +29,12 @@ public class GameRuleHandler extends FreedomService
         setGameRule(GameRule.DO_MOB_SPAWNING, !ConfigEntry.MOB_LIMITER_ENABLED.getBoolean(), false);
         setGameRule(GameRule.DO_TILE_DROPS, false, false);
         setGameRule(GameRule.MOB_GRIEFING, false, false);
-        setGameRule(GameRule.COMMAND_BLOCK_OUTPUT, false);
+        setGameRule(GameRule.COMMAND_BLOCK_OUTPUT, true);
         setGameRule(GameRule.NATURAL_REGENERATION, true, false);
         setGameRule(GameRule.KEEP_INVENTORY, true, false);
         setGameRule(GameRule.ANNOUNCE_ADVANCEMENTS, false, false);
-        setGameRule(GameRule.SHOW_DEATH_MESSAGES, false, false);
-        setGameRule(GameRule.SEND_COMMAND_FEEDBACK, false, false);
+        setGameRule(GameRule.SHOW_DEATH_MESSAGES, true, false);
+        setGameRule(GameRule.SEND_COMMAND_FEEDBACK, true, false);
         commitGameRules();
     }
 
