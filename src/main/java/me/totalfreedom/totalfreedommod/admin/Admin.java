@@ -252,5 +252,8 @@ public class Admin
     {
         return scFormat;
     }
-    public void setScFormat(String scFormat) {this.scFormat = scFormat;}
+    public void setScFormat(String scFormat)
+    {
+        this.scFormat = scFormat;
+    }
 }
