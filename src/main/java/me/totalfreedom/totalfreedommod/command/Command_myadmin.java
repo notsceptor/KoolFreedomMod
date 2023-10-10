@@ -167,7 +167,7 @@ public class Command_myadmin extends FreedomCommand
                 plugin.al.save(target);
                 plugin.al.updateTables();
                 msg("Set senior chat format to \"" + format + "\".", ChatColor.GRAY);
-                String example = format.replace("%name%", "ExampleSenior").replace("%rank%", Rank.SENIOR.getAbbr()).replace("%rankcolor%", Rank.SENIOR.getColor().toString()).replace("%msg", "This is obviously senior chat");
+                String example = format.replace("%name%", "ExampleSenior").replace("%rank%", Rank.SENIOR.getAbbr()).replace("%rankcolor%", Rank.SENIOR.getColor().toString()).replace("%msg%", "This is obviously senior chat");
                 msg(ChatColor.GRAY + "Example: " + FUtil.colorize(example));
                 return true;
             }
