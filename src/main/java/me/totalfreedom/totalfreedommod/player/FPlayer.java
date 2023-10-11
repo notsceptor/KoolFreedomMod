@@ -71,7 +71,6 @@ public class FPlayer
 
 
     private boolean invSee = false;
-    private boolean inSeniorChat;
 
     public FPlayer(TotalFreedomMod plugin, Player player)
     {
@@ -380,9 +379,9 @@ public class FPlayer
         this.inAdminchat = inAdminchat;
     }
 
-    public void setSeniorChat(boolean inSeniorChat)
+    public void setSeniorChat(boolean inSeniorchat)
     {
-        this.inSeniorChat = inSeniorChat;
+        this.inSeniorchat = inSeniorchat;
     }
 
     public boolean inSeniorChat()
@@ -666,7 +665,7 @@ public class FPlayer
 
     public void setInSeniorchat(boolean inSeniorchat)
     {
-        this.inSeniorchat = inSeniorChat;
+        this.inSeniorchat = inSeniorchat;
     }
 
     public boolean isAllCommandsBlocked()
