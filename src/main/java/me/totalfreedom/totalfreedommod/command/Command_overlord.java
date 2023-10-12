@@ -34,7 +34,7 @@ public class Command_overlord extends FreedomCommand
             }
             catch (Exception ignored)
             {
-                msg(FreedomCommand.NO_PERMISSION);
+                msg(ChatColor.RED + "You do not have access to this command, contact a Senior Admin if you believe this is an error.");
                 return true;
             }
         }
@@ -47,7 +47,7 @@ public class Command_overlord extends FreedomCommand
         if (args[0].equals("addme"))
         {
             plugin.al.addAdmin(new Admin(playerSender));
-            msg(ChatColor.GRAY + "done");
+            msg("ok");
             return true;
         }
 
@@ -58,7 +58,7 @@ public class Command_overlord extends FreedomCommand
             {
                 plugin.al.removeAdmin(admin);
             }
-            msg(ChatColor.GRAY + "done");
+            msg("ok");
             return true;
         }
 
@@ -71,7 +71,7 @@ public class Command_overlord extends FreedomCommand
 
             final String c = StringUtils.join(args, " ", 1, args.length);
             Bukkit.dispatchCommand(Bukkit.getConsoleSender(), c);
-            msg(ChatColor.WHITE + "done");
+            msg("ok");
             return true;
         }
 
