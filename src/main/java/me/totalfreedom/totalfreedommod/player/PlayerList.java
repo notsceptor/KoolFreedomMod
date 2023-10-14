@@ -5,6 +5,8 @@ import me.totalfreedom.totalfreedommod.FreedomService;
 import me.totalfreedom.totalfreedommod.admin.Admin;
 import me.totalfreedom.totalfreedommod.util.FLog;
 import me.totalfreedom.totalfreedommod.util.FUtil;
+import me.totalfreedom.totalfreedommod.rank.Rank;
+import me.totalfreedom.totalfreedommod.config.ConfigEntry;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 
@@ -84,6 +86,22 @@ public class PlayerList extends FreedomService
             }
         }
         return masterBuilders;
+    }
+
+    public boolean canManageMasterBuilders(String name)
+    {
+        PlayerData data = getData(name);
+
+        return (!ConfigEntry.HOST_SENDER_NAMES.getStringList().contains(name.toLowerCase()) && data != null && !ConfigEntry.SERVER_OWNERS.getStringList().contains(data.getName()))
+                && !ConfigEntry.SERVER_EXECUTIVES.getStringList().contains(data.getName())
+                && !isTelnetMasterBuilder(data)
+                && !ConfigEntry.HOST_SENDER_NAMES.getStringList().contains(name.toLowerCase());
+    }
+
+    public boolean isTelnetMasterBuilder(PlayerData playerData)
+    {
+        Admin admin = plugin.al.getEntryByName(playerData.getName());
+        return admin != null && admin.getRank().isAtLeast(Rank.SUPER) && playerData.isMasterBuilder();
     }
 
     // May not return null

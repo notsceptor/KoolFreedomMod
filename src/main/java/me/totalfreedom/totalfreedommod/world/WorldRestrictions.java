@@ -1,8 +1,18 @@
 package me.totalfreedom.totalfreedommod.world;
 
+import com.sk89q.worldguard.protection.flags.Flag;
+import com.sk89q.worldguard.protection.flags.Flags;
+import com.sk89q.worldguard.protection.flags.StateFlag;
+import com.sk89q.worldguard.protection.managers.RegionManager;
+import com.sk89q.worldguard.protection.regions.GlobalProtectedRegion;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import me.totalfreedom.totalfreedommod.FreedomService;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -12,9 +22,6 @@ import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.player.PlayerArmorStandManipulateEvent;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
-
-import java.util.Arrays;
-import java.util.List;
 
 public class WorldRestrictions extends FreedomService
 {
@@ -37,7 +44,7 @@ public class WorldRestrictions extends FreedomService
 
     public boolean doRestrict(Player player)
     {
-        if (!plugin.pl.getData(player).isMasterBuilder() && plugin.al.isAdmin(player))
+        if (!plugin.pl.getData(player).isMasterBuilder() && plugin.pl.canManageMasterBuilders(player.getName()))
         {
             if (player.getWorld().equals(plugin.wm.masterBuilderWorld.getWorld()))
             {
