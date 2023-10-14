@@ -19,13 +19,13 @@ public class Command_seniorchat extends FreedomCommand
         {
             if (senderIsConsole)
             {
-                msg("Only in-game players can toggle SeniorChat.");
+                msg(FreedomCommand.ONLY_IN_GAME);
                 return true;
             }
 
             FPlayer userinfo = plugin.pl.getPlayer(playerSender);
             userinfo.setSeniorChat(!userinfo.inSeniorChat());
-            msg("Senior chat turned " + (userinfo.inSeniorChat() ? "on" : "off") + ".");
+            msg("Senior chat toggled " + (userinfo.inSeniorChat() ? "on" : "off") + ".");
         }
         else
         {
