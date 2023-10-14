@@ -33,7 +33,7 @@ public class GameRuleHandler extends FreedomService
         setGameRule(GameRule.NATURAL_REGENERATION, true, false);
         setGameRule(GameRule.KEEP_INVENTORY, true, false);
         setGameRule(GameRule.ANNOUNCE_ADVANCEMENTS, false, false);
-        setGameRule(GameRule.SHOW_DEATH_MESSAGES, true, false);
+        setGameRule(GameRule.SHOW_DEATH_MESSAGES, false, false);
         setGameRule(GameRule.SEND_COMMAND_FEEDBACK, true, false);
         commitGameRules();
     }
