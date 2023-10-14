@@ -26,12 +26,12 @@ import org.jetbrains.annotations.Nullable;
 public abstract class FreedomCommand implements CommandExecutor, TabCompleter
 {
     public static final String COMMAND_PREFIX = "Command_";
-    public static final String YOU_ARE_OP = ChatColor.YELLOW + "You have OP now.";
-    public static final String YOU_ARE_NOT_OP = ChatColor.YELLOW + "HAHA YOU DON'T HAVE OP ANYMORE!!!!!";
+    public static final String YOU_ARE_OP = ChatColor.YELLOW + "You are now OP.";
+    public static final String YOU_ARE_NOT_OP = ChatColor.YELLOW + "You are no longer OP.....loser";
     public static final String PLAYER_NOT_FOUND = ChatColor.GRAY + "Who?";
     public static final String ONLY_CONSOLE = ChatColor.RED + "Nuh-uh, only console.";
     public static final String ONLY_IN_GAME = ChatColor.RED + "Get your lazy ass in the game";
-    public static final String NO_PERMISSION = ChatColor.RED + "You do not have permission to execute this command.";
+    public static final String NO_PERMISSION = ChatColor.RED + "Skill issue (no permissions).";
     public static final Timer timer = new Timer();
     public static final Map<CommandSender, FreedomCommand> COOLDOWN_TIMERS = new HashMap<>();
     protected final TotalFreedomMod plugin = TotalFreedomMod.getPlugin();
