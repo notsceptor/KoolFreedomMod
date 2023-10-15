@@ -156,21 +156,21 @@ public class LoginProcess extends FreedomService
         // Server full check
         if (server.getOnlinePlayers().size() >= server.getMaxPlayers())
         {
-            event.disallow(PlayerLoginEvent.Result.KICK_OTHER, "Sorry, but this server is full.");
+            event.disallow(PlayerLoginEvent.Result.KICK_OTHER, "Server has reached it's player capacity, you cannot join.");
             return;
         }
 
         // Admin-only mode
         if (ConfigEntry.ADMIN_ONLY_MODE.getBoolean())
         {
-            event.disallow(PlayerLoginEvent.Result.KICK_OTHER, "Server is temporarily open to admins only.");
+            event.disallow(PlayerLoginEvent.Result.KICK_OTHER, "Server is open to admins only...for now.");
             return;
         }
 
         // Lockdown mode
         if (lockdownEnabled)
         {
-            event.disallow(PlayerLoginEvent.Result.KICK_OTHER, "Server is currently in lockdown mode.");
+            event.disallow(PlayerLoginEvent.Result.KICK_OTHER, "Server is in lockdown mode.");
             return;
         }
 
