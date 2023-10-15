@@ -29,23 +29,12 @@ server:
   # All players who show up as owner
   owners:
     - gamingto12
-  coowners:
-    - feminuker
-  developers:
-    - HowToFailBote
-    - Aquadraws
-  system_admins:
-    - JuliaDev
-  executives:
-    - svloogz
-    - Prolect
-    - Crimson_proto
-    - 0x7694C9
+  coowners: []
+  developers: []
+  system_admins: []
+  executives: []
   assistant_executives: [ ]
-  master_builder_management:
-    - gamingto12
-    - Crimson_proto
-    - feminuker
+  master_builder_management: []
 
   # URL players should appeal for bans at
   ban_url: ''
