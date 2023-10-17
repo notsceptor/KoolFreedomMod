@@ -22,7 +22,7 @@ public class Command_stop extends FreedomCommand
     public boolean run(CommandSender sender, Player playerSender, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
     {
 
-        String reason = "Server is going offline, come back in about 20 seconds.";
+        String reason = "Server is offline, be patient while we fuck around.";
 
         if (args.length != 0)
         {
