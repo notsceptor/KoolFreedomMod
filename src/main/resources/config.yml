@@ -2,13 +2,13 @@
 # Generic server information
 server:
   # You should change this to your server's name
-  name: KoolFreedom
+  name: Undefined
 
   # The address your server is located at. Please do not include the port.
-  address: koolfreedom.eu.org
+  address: undefined.please-define.me
 
   # Shown at the server list - Please note that support for %mcversion% has been withdrawn
-  motd: KoolFreedom FreeOP
+  motd: Insert Server Name Here
 
   # Every word in the MOTD will be a different color unless prefixed by a color code
   colorful_motd: true
@@ -28,7 +28,7 @@ server:
 
   # All players who show up as owner
   owners:
-    - gamingto12
+    - scripthead
   coowners: []
   developers: []
   system_admins: []
@@ -96,10 +96,10 @@ shop:
   enabled: true
 
   # Shop title
-  title: '&e&lKoolFreedom Shop'
+  title: '&e&lShop'
 
   # Shop prefix
-  prefix: '&8[&eKool Shop&8]'
+  prefix: '&8[&eShop&8]'
 
   # How many coins to voters get per vote?
   coins_per_vote: 10
