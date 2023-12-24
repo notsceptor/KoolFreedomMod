@@ -18,7 +18,7 @@ import java.util.Collections;
 import java.util.List;
 
 @CommandPermissions(level = Rank.SUPER, source = SourceType.ONLY_IN_GAME)
-@CommandParameters(description = "Manage your admin entry.", usage = "/<command> [-o <admin name>] <clearips | clearip <ip> | setscformat <format> | clearscformat> | syncroles>")
+@CommandParameters(description = "Manage your admin entry.", usage = "/<command> [-o <admin name>] <clearips | clearip <ip> | setacformat <format> | setscformat <format> | clearscformat> | syncroles>")
 public class Command_myadmin extends FreedomCommand
 {
     @Override
