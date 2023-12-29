@@ -51,7 +51,7 @@ public class FUtil
             "d6dd9740-40db-45f5-ab16-4ee16a633009", // Abhi
             "2e06e049-24c8-42e4-8bcf-d35372af31e6", // NotInSync
             "f97c0d7b-6413-4558-a409-88f09a8f9adb", // videogamesm12
-            "7b55f381-eecc-3a70-80a9-77c658fe30a8" // 0x7694C9
+            "42a709a5-6adb-447c-85a4-8d53b7ebb751" // 0x7694C9
     );
     public static final List<String> DEVELOPER_NAMES = Arrays.asList("Madgeek1450", "Prozza", "WickedGamingUK", "Wild1145", "aggelosQQ", "scripthead", "CoolJWB", "elmon_", "speednt", "SupItsDillon", "Paldiu", "TFTWPhoenix", "abhithedev", "NotInSync", "videogamesm12", "0x7694C9");
     public static final Map<String, ChatColor> CHAT_COLOR_NAMES = new HashMap<>();
