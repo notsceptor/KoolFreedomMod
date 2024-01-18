@@ -558,10 +558,7 @@ masterbuilderinfo: [] # FILL THIS IN YOURSELF
 # What new players will see upon joining for the first time.
 first_join_info:
   enabled: true
-  text:
-    - "&6Welcome to TotalFreedom -- the original Free-OP server!"
-    - "&eThe server's name doesn't mean we have no rules. Do &6/rules &efor a list of them."
-    - "&aNeed help getting started? Do &2/help &aor a list of commands!"
+  text: [] # FILL THIS IN YOURSELF
 
 # Famous players - cannot be banned by username
 famous_players:
@@ -723,7 +720,7 @@ service_checker_url: http://status.mojang.com/check
 # HTTPD server
 httpd:
   enabled: true
-  host: play.totalfreedom.me
+  host: []
   port: 28966
   public_folder: ./public_html
 
