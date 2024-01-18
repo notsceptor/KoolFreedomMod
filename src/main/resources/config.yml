@@ -23,8 +23,8 @@ server:
 
   # Shown on join as a title
   login_title:
-    title: '&7Welcome to &6TotalFreedom&7!'
-    subtitle: '&eThe Original All-Op Server!'
+    title: ''
+    subtitle: ''
 
   # All players who show up as owner
   owners:
@@ -54,7 +54,7 @@ discord:
   # If you do not have a token, make a bot account and get one at https://discordapp.com/developers/applications/me
   token: ''
   # The prefix for the integrated bot commands
-  prefix: 'tf!'
+  prefix: '!'
   # The official discord server's ID for this server
   server_id: ''
   # Channel to send /report messages to
@@ -525,7 +525,7 @@ announcer:
   interval: 600
 
   # Prefix for all announcements
-  prefix: '&5[&eTotalFreedom&5] &b'
+  prefix: '&5[&eAnnouncements&5] &b'
 
   announcements:
     - 'If you are not OP, be sure to ask!'
