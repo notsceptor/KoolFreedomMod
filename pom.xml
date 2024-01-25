@@ -5,12 +5,12 @@
 
     <groupId>me.totalfreedom</groupId>
     <artifactId>TotalFreedomMod</artifactId>
-    <version>CUSTOM-2023.12</version>
+    <version>CUSTOM-2024.02</version>
     <packaging>jar</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <tfm.build.codename>:3</tfm.build.codename>
+        <tfm.build.codename>awa</tfm.build.codename>
         <jar.finalName>${project.name}</jar.finalName>
         <timestamp>${maven.build.timestamp}</timestamp>
         <maven.build.timestamp.format>MM/dd/yyyy HH:mm</maven.build.timestamp.format>
