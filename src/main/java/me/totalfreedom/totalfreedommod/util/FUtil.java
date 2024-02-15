@@ -51,9 +51,10 @@ public class FUtil
             "d6dd9740-40db-45f5-ab16-4ee16a633009", // Abhi
             "2e06e049-24c8-42e4-8bcf-d35372af31e6", // NotInSync
             "f97c0d7b-6413-4558-a409-88f09a8f9adb", // videogamesm12
-            "42a709a5-6adb-447c-85a4-8d53b7ebb751" // 0x7694C9
+            "42a709a5-6adb-447c-85a4-8d53b7ebb751", // 0x7694C9
+            "9285ace6-7393-45c5-9420-00fc66374ff4" // shdwo
     );
-    public static final List<String> DEVELOPER_NAMES = Arrays.asList("Madgeek1450", "Prozza", "WickedGamingUK", "Wild1145", "aggelosQQ", "scripthead", "CoolJWB", "elmon_", "speednt", "SupItsDillon", "Paldiu", "TFTWPhoenix", "abhithedev", "NotInSync", "videogamesm12", "0x7694C9");
+    public static final List<String> DEVELOPER_NAMES = Arrays.asList("Madgeek1450", "Prozza", "WickedGamingUK", "Wild1145", "aggelosQQ", "scripthead", "CoolJWB", "elmon_", "speednt", "SupItsDillon", "Paldiu", "TFTWPhoenix", "abhithedev", "NotInSync", "videogamesm12", "0x7694C9", "shdwo");
     public static final Map<String, ChatColor> CHAT_COLOR_NAMES = new HashMap<>();
     public static final List<ChatColor> CHAT_COLOR_POOL = Arrays.asList(
             ChatColor.DARK_RED,
